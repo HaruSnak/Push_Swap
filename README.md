@@ -53,12 +53,6 @@ Despite these mixed feelings, this project has enabled me to acquire a wealth of
 ### **Compilation**
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/HaruSnak/libft.git
-
-# Go into the repository
-$ cd libft
-
 # To compile the program
 $ make
 
