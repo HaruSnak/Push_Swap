@@ -6,15 +6,15 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 17:48:52 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:26:04 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:21:33 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// Vous trouverez ici les fonctions qui permettent de pre-trier la pile B
-// Simplifier par cette fonction, le prototype en commentaire est plus complexe
-// Cependant, il n'est pas terminer et ne fonctionne pas correctement.
+// Here you will find the functions that allow pre-sorting stack B
+// Simplified by this function, the prototype in the comment is more complex
+// However, it is not finished and does not work correctly.
 void	ft_pre_sorting_b(t_stack_node **stack_b)
 {
 	int		**rank;

@@ -6,14 +6,14 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:44:11 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 20:19:17 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:25:48 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// ft_init permet d'initialiser la stack a partir des arguments.
-// C'est la base du remplissage s'il y a plusieurs args ou un seul.
+// ft_init initializes the stack from the arguments.
+// It's the basis of filling if there are multiple args or just one.
 void	ft_init(char **temp_or_argv, t_stack_node **stack_a)
 {
 	t_stack_node	*temp;
@@ -40,8 +40,9 @@ void	ft_init(char **temp_or_argv, t_stack_node **stack_a)
 	}
 }
 
-// ft_init_stack_alone_arg permet d'initialiser la stack si il
-// n'y a qu'un seul argument.
+
+// ft_init_stack_alone_arg initializes the stack if there is
+//only one argument.
 void	ft_init_stack_alone_arg(t_stack_node **stack_a, char **argv)
 {
 	char	**temp_str;
@@ -70,7 +71,7 @@ void	ft_init_stack_alone_arg(t_stack_node **stack_a, char **argv)
 	free(temp_str);
 }
 
-// ft_init_stack_a permet d'initialiser la stack a partir des arguments.
+// ft_init_stack_a initializes the stack from the arguments.
 void	ft_init_stack_a(t_stack_node **stack_a, int argc, char **argv)
 {
 	if (argc == 2)

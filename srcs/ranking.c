@@ -6,19 +6,19 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 13:31:26 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:23:22 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:26:22 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// Vous trouverez ici les fonctions qui permettent de classer les nombres
-// de la pile en fonction de leur position dans la pile.
-// ft_size_stack = taille de la pile
-// ft_ranking_maxint = le plus grand nombre de la pile
-// ft_rank_process = processus de classement
-// ft_ranking_init = initialisation du classement
-// ft_ranking = classement
+// Here you will find the functions that allow ranking the numbers
+// in the stack based on their position in the stack.
+// ft_size_stack = stack size
+// ft_ranking_maxint = the largest number in the stack
+// ft_rank_process = ranking process
+// ft_ranking_init = ranking initialization
+// ft_ranking = ranking
 int	ft_size_stack(t_stack_node **stack)
 {
 	t_stack_node	*current;

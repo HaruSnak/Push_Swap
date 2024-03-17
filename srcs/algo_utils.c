@@ -6,17 +6,17 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:37:49 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:24:00 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:24:04 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// Vous trouverez ici les fonctions qui permettent de comparer les piles
-// et de les classer en fonction de leur position dans la pile.
-// ft_check_stack = vérification de la pile
-// ft_compare_ranking = comparaison du classement
-// ft_last_rank = dernier classement
+// Here you will find the functions that allow comparing stacks
+// and ranking them based on their position in the stack.
+// ft_check_stack = stack checking
+// ft_compare_ranking = ranking comparison
+// ft_last_rank = last ranking
 bool	ft_check_stack(t_stack_node **stack_a, int **rank, char c)
 {
 	t_stack_node	*current;

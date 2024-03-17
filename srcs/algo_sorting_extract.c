@@ -6,15 +6,15 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 17:53:32 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:36:07 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:22:59 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// ft_c_end_stronger_c_start permet de trier la pile b et de la push sur la p_a
-// ft_sorting_b = tri de la pile b, c'est la base de l'algo de tri
-// ft_find_occurrence permet de trouver le nombre d'occurence de la valeur
+// ft_c_end_stronger_c_start sorts stack b and pushes it onto stack a.
+// ft_sorting_b = sorting stack b, it is the basis of the sorting algorithm.
+// ft_find_occurrence finds the number of occurrences of the value.
 // ft_c_start_stronger_c_end = c_end
 // ft_c_end_stronger_c_start = c_start
 void	ft_c_end_stronger_c_start(t_stack_node **stack_a,
@@ -93,6 +93,7 @@ void	ft_sorting_b(t_stack_node **stack_a, t_stack_node **stack_b)
 	}
 }
 
+//The system I had attempted in order to optimize the sorting algorithm.
 /*void	ft_sorting_b(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	int	**rank;

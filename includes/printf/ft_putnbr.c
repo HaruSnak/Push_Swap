@@ -6,7 +6,7 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:17:31 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/17 15:00:20 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:15:14 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ int	ft_putnbr_base(unsigned long long nb, const char *base)
 	count += ft_putchar(base[nb % len]);
 	return (count);
 }
-/*
-int	main(void)
-{
-	int test = 16080;
-	ft_putnbr_fd(test, 1);
-
-	return (0);
-}*/

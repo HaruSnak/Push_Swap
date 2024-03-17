@@ -6,7 +6,7 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 11:40:06 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:13:34 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:26:00 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,6 @@ int	main(int argc, char **argv)
 		ft_sorting_base(&a, &b, rank);
 		rank = ft_ranking(&a);
 	}
-	/*t_stack_node *tmp = a;
-	while (tmp != NULL)
-	{
-		printf("stack_a: %d\n", tmp->nbr);
-		tmp = tmp->next;
-	}*/
 	ft_free_rank(rank, &a);
 	ft_free_stack(&a);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:24:46 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 20:24:39 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:19:39 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include "libft/libft.h"
+# include "libft/includes/libft.h"
 # include "printf/ft_printf.h"
 
 # define MAXINT 2147483647
 # define MININT -2147483647
-# define DIVIDER 30 // RELIER
 
 typedef struct s_stack_node
 {

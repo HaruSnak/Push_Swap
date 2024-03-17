@@ -6,7 +6,7 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:51:23 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:13:23 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:30:33 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,16 +83,13 @@ char	**ft_split(char const *s, char c)
 {
 	int		count;
 	char	**result;
-	char	*c_str;
+	char	c_str[2];
 
 	if (!s)
 		return (NULL);
-	c_str = malloc(2 * sizeof(char));
-	if (!c_str)
-		return (NULL);
-	sprintf(c_str, "%c", c);
+	c_str[0] = c;
+	c_str[1] = '\0';
 	count = word_count(s, c);
 	result = allocate_words(s, c, count, c_str);
-	free(c_str);
 	return (result);
 }

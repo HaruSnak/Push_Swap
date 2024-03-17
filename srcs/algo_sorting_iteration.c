@@ -6,13 +6,13 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 17:52:14 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/03/12 09:42:47 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 20:59:39 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// ft_suits permet de boucler sur la stack pour trouver le c_end.
+// ft_suits loops over the stack to find the c_end.
 void	ft_suits(unsigned int *c_end, unsigned int *c_check,
 	int *c_iteration, int low)
 {
@@ -22,8 +22,8 @@ void	ft_suits(unsigned int *c_end, unsigned int *c_check,
 	(*c_check) = (*c_end);
 }
 
-// ft_condition_exit permet de sortir de la boucle si la stack est
-// inferieur a 13 // (BETA) MAXIMUM RANGE ERROR.
+// ft_condition_exit allows exiting the loop if the stack is less than 13
+// (BETA) MAXIMUM RANGE ERROR.
 void	ft_condition_exit(t_stack_node **stack_a,
 	unsigned int *c_end, unsigned int *c_check)
 {
@@ -35,8 +35,7 @@ void	ft_condition_exit(t_stack_node **stack_a,
 	}
 }
 
-// ft_iteration_cend permet de boucler sur la stack pour trouver le
-// c_end.
+// ft_iteration_cend loops over the stack to find the c_end.
 void	ft_iteration_cend(t_stack_node **stack_a, int **rank,
 	unsigned int *c_end, int low)
 {
@@ -65,8 +64,7 @@ void	ft_iteration_cend(t_stack_node **stack_a, int **rank,
 	}
 }
 
-// ft_iteration_cstart permet de boucler sur la stack pour trouver le
-// c_start.
+// ft_iteration_cstart loops over the stack to find the c_start.
 void	ft_iteration_cstart(t_stack_node **stack_a, unsigned int *c_start,
 			int low)
 {
@@ -95,14 +93,16 @@ void	ft_iteration_cstart(t_stack_node **stack_a, unsigned int *c_start,
 	ft_free_rank(rank, stack_a);
 }
 
-// ft_loop_iteration permet de boucler sur la stack pour trouver les
-// c_start et c_end.
+// ft_loop_iteration loops over the stack to find the c_start and c_end.
 void	ft_loop_iteration(t_stack_node **stack_a, unsigned int *c_start,
 	unsigned int *c_end, int **rank)
 {
 	int	low;
 
-	low = 30;
+	if (ft_size_stack(stack_a) <= 100)
+		low = 10;
+	else
+		low = 30;
 	if (ft_size_stack(stack_a) < low)
 		low = ft_size_stack(stack_a) - 3;
 	*c_start = 0;
@@ -111,6 +111,7 @@ void	ft_loop_iteration(t_stack_node **stack_a, unsigned int *c_start,
 	ft_iteration_cend(stack_a, rank, c_end, low);
 }
 
+//The complete function which does the same thing as the functions above.
 /*void	ft_sorting(t_stack_node **stack_a,
 	t_stack_node **stack_b, int **rank)
 {

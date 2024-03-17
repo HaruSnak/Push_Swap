@@ -6,16 +6,16 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 15:28:01 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:24:44 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:23:24 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// Vous trouverez ici les fonctions qui permettent de trier les piles
-// en utilisant les fonctions ft_sa_sb, ft_pa_pb, ft_ra_rb...
-// ft_sorting_third_b = tri de la pile b
-// ft_sorting_third_a = tri de la pile a
+// Here you will find the functions that allow sorting the stacks
+// using functions like ft_sa_sb, ft_pa_pb, ft_ra_rb...
+// ft_sorting_third_b = sorting stack b
+// ft_sorting_third_a = sorting stack a
 void	ft_sorting_third_a(t_stack_node **stack_a, int **rank)
 {
 	while (!ft_check_stack(stack_a, rank, 'a'))

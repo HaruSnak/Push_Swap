@@ -2,22 +2,27 @@ NAME	=	libft.a
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-FILES	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_striteri.c \
-			ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
-			ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c \
-			ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-			ft_toupper.c ft_tolower.c ft_calloc.c ft_strdup.c ft_substr.c \
-			ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
-			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-			get_next_line.c \
+FILES	=	mem/ft_memset.c mem/ft_bzero.c mem/ft_memcpy.c mem/ft_memmove.c str/ft_striteri.c \
+			mem/ft_memchr.c mem/ft_memcmp.c str/ft_strlen.c str/ft_strlcpy.c str/ft_strlcat.c \
+			str/ft_strchr.c str/ft_strrchr.c str/ft_strnstr.c str/ft_strncmp.c conv/ft_atoi.c \
+			char/ft_isalpha.c char/ft_isdigit.c char/ft_isalnum.c char/ft_isascii.c char/ft_isprint.c \
+			char/ft_toupper.c char/ft_tolower.c mem/ft_calloc.c str/ft_strdup.c str/ft_substr.c \
+			str/ft_strjoin.c str/ft_strtrim.c str/ft_split.c conv/ft_itoa.c str/ft_strmapi.c \
+			put/ft_putchar_fd.c put/ft_putstr_fd.c put/ft_putendl_fd.c put/ft_putnbr_fd.c \
+			gnl/get_next_line.c \
 
-BONUS_FILES	=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
-				ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c \
-				ft_lstmap_bonus.c \
+BONUS_FILES	=	lst/ft_lstnew_bonus.c lst/ft_lstadd_front_bonus.c lst/ft_lstsize_bonus.c lst/ft_lstlast_bonus.c \
+				lst/ft_lstadd_back_bonus.c lst/ft_lstdelone_bonus.c lst/ft_lstclear_bonus.c lst/ft_lstiter_bonus.c \
+				lst/ft_lstmap_bonus.c \
 
 OBJ			=	$(FILES:.c=.o)
 BONUS_OBJ	=	$(BONUS_FILES:.c=.o)
 RM			=	rm -f
+
+vpath %.c $(sort $(dir $(FILES)))
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $(dir $<)$@
 
 all:		$(NAME)
 
@@ -27,11 +32,10 @@ $(NAME):	$(OBJ)
 	@ranlib $@
 	@echo "$(NAME) indexed"
 
-$(OBJ):		$(FILES)
-	@gcc -c $(FLAG) $(FILES)
+$(OBJ): %.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus:		$(BONUS_FILES)
-	@gcc -c $(FLAG) $(BONUS_FILES)
+bonus: $(BONUS_OBJ)
 	@ar rcs $(NAME) $(BONUS_OBJ)
 	@ranlib $(NAME)
 

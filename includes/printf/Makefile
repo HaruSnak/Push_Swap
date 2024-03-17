@@ -2,8 +2,8 @@ NAME	=	libftprintf.a
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-FILES	=	ft_printf.c ft_putstr.c ft_putnbr.c ft_putchar.c \
-			ft_conv_primary.c ft_conv_suit.c ../libft/ft_strlen.c\
+FILES	=	ft_printf.c ft_strlen.c ft_putstr.c ft_putnbr.c ft_putchar.c \
+			ft_conv_primary.c ft_conv_suit.c \
 
 OBJ			=	$(FILES:.c=.o)
 RM			=	rm -f

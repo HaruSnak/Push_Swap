@@ -6,14 +6,14 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 23:08:11 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:30:02 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:28:01 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// ft_check_cmds permet de verifier les commandes
-// ft_verification permet d'analyser ce que ft_check_cmds a verifier
+// ft_check_cmds checks the commands
+// ft_verification analyzes what ft_check_cmds has checked
 void	ft_check_cmds(t_stack_node **stack_a, t_stack_node **stack_b,
 	char *line)
 {

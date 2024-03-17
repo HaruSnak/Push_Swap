@@ -6,7 +6,7 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:17:41 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/17 15:00:17 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:15:18 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,3 @@ void	ft_putstr(const char *s)
 		i++;
 	}
 }
-/*
-int	main(void)
-{
-	char *test = 0;
-	ft_putstr_fd(test, 1);
-	return (0);
-}*/

@@ -6,16 +6,16 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 14:02:28 by shmoreno          #+#    #+#             */
-/*   Updated: 2024/02/24 22:15:45 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:25:05 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// error_multi_args permet de verifier si les arguments sont bien des int.
-// error_alone_arg permet de verifier si l'argument est bien un int.
-// base_errors permet de verifier si il y a bien des arguments.
-// Cela me permet de filtrer les erreurs de base.
 #include "../includes/push_swap.h"
 
+// error_multi_args checks if the arguments are indeed integers.
+// error_alone_arg checks if the argument is indeed an integer.
+// base_errors checks if there are any arguments at all.
+// This allows me to filter basic errors.
 int	ft_error_multi_args(char **argv)
 {
 	size_t	i;
@@ -39,7 +39,7 @@ int	ft_error_multi_args(char **argv)
 	return (0);
 }
 
-// ft_duplicate sert a verifier si il y a des doublons dans la stack.
+// ft_duplicate is used to check if there are any duplicates in the stack.
 int	ft_duplicate(struct s_stack_node **stack_a)
 {
 	struct s_stack_node	*base;
@@ -60,7 +60,7 @@ int	ft_duplicate(struct s_stack_node **stack_a)
 	return (0);
 }
 
-//ft_free_stack permet de free la stack.
+// ft_free_stack is used to free the stack.
 void	ft_free_stack(t_stack_node **stack)
 {
 	t_stack_node	*current;
@@ -76,7 +76,7 @@ void	ft_free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-//ft_free_rank permet de free le rank.
+// ft_free_rank is used to free the rank.
 void	ft_free_rank(int **rank, t_stack_node **stack)
 {
 	int	i;
@@ -90,7 +90,7 @@ void	ft_free_rank(int **rank, t_stack_node **stack)
 	free(rank);
 }
 
-//ft_free_errors permet de free la stack et d'afficher l'erreur.
+// ft_free_errors is used to free the stack and display the error.
 void	ft_free_errors(t_stack_node **a)
 {
 	ft_free_stack(a);
