@@ -38,9 +38,9 @@ Despite these mixed feelings, this project has enabled me to acquire a wealth of
 
 **100 Numbers:**
 
-* **Worst = 824 instructions**
-* **Median = 739 instructions**
-* **Best = 663 instructions**
+* **Worst = 795 instructions**
+* **Median = 727 instructions**
+* **Best = 652 instructions**
 * 
 **500 Numbers:**
 
